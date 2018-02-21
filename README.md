@@ -1,36 +1,34 @@
-# Keyboard PCB Guide
+# Instrukcja tworzenia PCB klawiatury. (tłumaczenie z Angielskiego)
 
-So you want to make a PCB for a keyboard? Don't know where or how to start? Well you've come to the right place!
+Więc masz zamiar zrobić PCB dla klawiatury? Nie wiesz gdzie zacząć? Cóż - przybyłeś w odpowiednie miejsce!place!
 
-## Table of Contents
+## Zabela zawartości
 
-* [Setting Up](#setting-up)
-* [Schematics](#schematics)
-* [Associating Components and Footprints](#associating-components-and-footprints)
-* [Generating Netlist](#generating-netlist)
+* [Wstęp](#setting-up)
+* [Schemat](#schematics)
+* [Ułożenie komponentów i pól dla elementów](#associating-components-and-footprints)
+* [Generowanie Netlist (listy połączeń)](#generating-netlist)
 * [PCB](#pcb)
-	* [Component Placement](#component-placement)
-	* [Edge Cuts](#edge-cuts)
-	* [Routing](#routing)
-	* [Mounting Holes](#mounting-holes)
-* [Production](#production)
-	* [Gerber Files](#gerber-files)
-	* [Manufacturer](#manufacturer)
-	* [Components](#components)
+	* [Ułożenie komponentów](#component-placement)
+	* [Wycinanie krawędzi](#edge-cuts)
+	* [Ułożenie ścieżek](#routing)
+	* [Otwory montażowe](#mounting-holes)
+* [Produkcja](#production)
+	* [Pliki Gerber](#gerber-files)
+	* [Producent](#manufacturer)
+	* [Elementy](#components)
 
-## Setting Up
+## Wstęp
 
-We're going to need [KiCad](http://kicad-pcb.org/). Download it, install it, and you should be ready to go!
+Na wstępie należy pobrać odpowiednie oprogramowanie - oprogramowaniem wyboru jest [KiCad](http://kicad-pcb.org/). Należy pobrać, zainstalować, później program będzie prawie gotowy do użytku.
 
-... almost.
+Będą potrzebne odpowiednie biblioteki. Sugerowane jest pobranie bibliotek "Hasu's keyboard_parts" [component library](https://github.com/tmk/kicad_lib_tmk) oraz [footprint library](https://github.com/tmk/keyboard_parts.pretty). /u/techieee także posiada porządne [switch footprint library](https://github.com/egladman/keebs.pretty).
 
-We're going to want some libraries, too. I like to use Hasu's keyboard_parts [component library](https://github.com/tmk/kicad_lib_tmk) and [footprint library](https://github.com/tmk/keyboard_parts.pretty). /u/techieee also has a good [switch footprint library](https://github.com/egladman/keebs.pretty).
+Pobrać należy wszystkie z wybranych zaś to umożliwi zabranie się do pracy.
 
-Download all of these and we should be good to go!
+Należy się upewnić, że posiada się aktualne oficjalne biblioteki KiCada. Powinny być załączone z instalacją KiCada.
 
-Make sure you also have the official KiCad libraries as well. Those should be included with your KiCad installation.
-
-## Schematics
+## Schemat
 
 Start up KiCad and create a new project (File > New Project > New Project). Name the project whatever you want. For the purposes of this guide, I'll be calling it "example". Very creative, I know.
 
