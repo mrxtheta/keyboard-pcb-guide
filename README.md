@@ -4,19 +4,19 @@ Więc masz zamiar zrobić PCB dla klawiatury? Nie wiesz gdzie zacząć? Cóż - 
 
 ## Zabela zawartości
 
-* [Wstęp](#setting-up)
-* [Schemat](#schematics)
-* [Ułożenie komponentów i pól dla elementów](#associating-components-and-footprints)
-* [Generowanie Netlist (listy połączeń)](#generating-netlist)
+* [Wstęp](#stęp)
+* [Schemat](#schemat)
+* [Ułożenie komponentów i pól dla elementów](#ułożenie-komponentów-i-pól-dla-elementów)
+* [Generowanie Netlist (listy połączeń)](#generowanie-netlist-(listy-połączeń))
 * [PCB](#pcb)
-	* [Ułożenie komponentów](#component-placement)
-	* [Wycinanie krawędzi](#edge-cuts)
-	* [Ułożenie ścieżek](#routing)
-	* [Otwory montażowe](#mounting-holes)
-* [Produkcja](#production)
-	* [Pliki Gerber](#gerber-files)
-	* [Producent](#manufacturer)
-	* [Elementy](#components)
+	* [Ułożenie komponentów](#ułożenie-komponentów)
+	* [Wycinanie krawędzi](#wycinanie-krawędzi)
+	* [Ułożenie ścieżek](#ułożenie-ścieżek)
+	* [Otwory montażowe](#Otwory-montażowe)
+* [Produkcja](#rodukcja)
+	* [Pliki Gerber](#gliki-gerber)
+	* [Producent](#producent)
+	* [Elementy](#elementy)
 
 ## Wstęp
 
