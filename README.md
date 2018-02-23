@@ -18,7 +18,7 @@ PCB klawiatury to spawa niekonieczna, ale ułatwiająca rozwiązywanie problemó
 	* [Producent](#6.2)
 	* [Elementy](#6.3)
 
-## 1.0
+##1.0
 
 Wstęp
 
@@ -30,7 +30,7 @@ Pobrać należy wszystkie z wybranych zaś to umożliwi zabranie się do pracy.
 
 Należy się upewnić, że posiada się aktualne oficjalne biblioteki KiCada. Powinny być załączone z instalacją KiCada.
 
-## 2.0
+##2.0
 
 Schemat
 
