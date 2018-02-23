@@ -4,19 +4,19 @@ PCB klawiatury to spawa niekonieczna, ale ułatwiająca rozwiązywanie problemó
 
 ## Tabela zawartości
 
-* [Wstęp](#1.0)
-* [Schemat](#2.0)
-* [Ułożenie komponentów i pól dla elementów](#3.0)
-* [Generowanie Netlist (listy połączeń)](#4.1)
+* [Wstęp](#10)
+* [Schemat](#20)
+* [Ułożenie komponentów i pól dla elementów](#30)
+* [Generowanie Netlist (listy połączeń)](#41)
 * [PCB](#5)
-	* [Ułożenie komponentów](#5.1)
-	* [Wycinanie krawędzi](#5.2)
-	* [Ułożenie ścieżek](#5.3)
-	* [Otwory montażowe](#5.4)
+	* [Ułożenie komponentów](#51)
+	* [Wycinanie krawędzi](#52)
+	* [Ułożenie ścieżek](#53)
+	* [Otwory montażowe](#54)
 * [Produkcja](#6)
-	* [Pliki Gerber](#6.1)
-	* [Producent](#6.2)
-	* [Elementy](#6.3)
+	* [Pliki Gerber](#61)
+	* [Producent](#62)
+	* [Elementy](#63)
 
 ## 1.0
 
