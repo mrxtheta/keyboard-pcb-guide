@@ -1,26 +1,28 @@
-# Instrukcja tworzenia PCB klawiatury. (tłumaczenie z Angielskiego)
+# Instrukcja tworzenia PCB klawiatury. (tłumaczenie z Angielskiego uzupełnione o prywatne doświadczenia, oraz poprawione w stosunku o dostępność elementów i nie tylko na terenie RP z 2k18)
 
-Więc masz zamiar zrobić PCB dla klawiatury? Nie wiesz gdzie zacząć? Cóż - przybyłeś w odpowiednie miejsce!place!
+PCB klawiatury to spawa niekonieczna, ale ułatwiająca rozwiązywanie problemów napraw urządzeń wykonanych przez producentów którzy mają problemy z utrzymaniem przyzwoitej jakości. Często naprawa oznacza konieczność porzucenia elementów niekoniecznych i stworzenia nowej całości od początku.
 
-## Zabela zawartości
+## Tabela zawartości
 
-* [Wstęp](#stęp)
-* [Schemat](#schemat)
-* [Ułożenie komponentów i pól dla elementów](#ułożenie-komponentów-i-pól-dla-elementów)
-* [Generowanie Netlist (listy połączeń)](#generowanie-netlist-(listy-połączeń))
-* [PCB](#pcb)
-	* [Ułożenie komponentów](#ułożenie-komponentów)
-	* [Wycinanie krawędzi](#wycinanie-krawędzi)
-	* [Ułożenie ścieżek](#ułożenie-ścieżek)
-	* [Otwory montażowe](#Otwory-montażowe)
-* [Produkcja](#rodukcja)
-	* [Pliki Gerber](#gliki-gerber)
-	* [Producent](#producent)
-	* [Elementy](#elementy)
+* [Wstęp](#1.0)
+* [Schemat](#2.0)
+* [Ułożenie komponentów i pól dla elementów](#3.0)
+* [Generowanie Netlist (listy połączeń)](#4.1)
+* [PCB](#5)
+	* [Ułożenie komponentów](#5.1)
+	* [Wycinanie krawędzi](#5.2)
+	* [Ułożenie ścieżek](#5.3)
+	* [Otwory montażowe](#5.4)
+* [Produkcja](#6)
+	* [Pliki Gerber](#6.1)
+	* [Producent](#6.2)
+	* [Elementy](#6.3)
 
-## Wstęp
+## 1.0
 
-Na wstępie należy pobrać odpowiednie oprogramowanie - oprogramowaniem wyboru jest [KiCad](http://kicad-pcb.org/). Należy pobrać, zainstalować, później program będzie prawie gotowy do użytku.
+Wstęp
+
+Na wstępie należy pobrać odpowiednie oprogramowanie - oprogramowaniem wyboru jest [KiCad](http://kicad-pcb.org/). Należy pobrać (np dla Windows http://kicad-pcb.org/download/windows/), zainstalować, później program będzie prawie gotowy do użytku. Dla użytkowników MS Windows sugeruję jednak zapoznać się w między czasie z Oracle VirtualBox. Będzie potrzebny dopiero na sam koniec, ale jest z tego programu całkiem niezła "zabawka".
 
 Będą potrzebne odpowiednie biblioteki. Sugerowane jest pobranie bibliotek "Hasu's keyboard_parts" [component library](https://github.com/tmk/kicad_lib_tmk) oraz [footprint library](https://github.com/tmk/keyboard_parts.pretty). /u/techieee także posiada porządne [switch footprint library](https://github.com/egladman/keebs.pretty).
 
@@ -28,11 +30,13 @@ Pobrać należy wszystkie z wybranych zaś to umożliwi zabranie się do pracy.
 
 Należy się upewnić, że posiada się aktualne oficjalne biblioteki KiCada. Powinny być załączone z instalacją KiCada.
 
-## Schemat
+## 2.0
 
-Start up KiCad and create a new project (File > New Project > New Project). Name the project whatever you want. For the purposes of this guide, I'll be calling it "example". Very creative, I know.
+Schemat
 
-We'll start by designing our schematics. Double click on your `.sch` file and you should be greeted with an empty schematic sheet:
+Narysowanie schematu w KiCad zaczyna się od stworzenia nowego projektu od podstaw, należy zacząć: Plik > Nowy Projekt> Nowy Projekt. Projekt można nazwać dowolnie i nie ma co do tego ograniczeń. Dla potrzeb tego pliku projekt będzie nosił nazwię dla uproszczenia 0proj1.
+
+Na wstępie należy przemyśleć sposób projektowania schematu, nie jest to takie proste jak się wydaje, więc warto na wstępie przestudiować inne schematy.
 
 ![blank schematic screen](https://puu.sh/tlFSC/faf74e75f0.png)
 
