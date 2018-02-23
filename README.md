@@ -7,12 +7,13 @@ PCB klawiatury to spawa niekonieczna, ale ułatwiająca rozwiązywanie problemó
 * [Wstęp](#10)
 * [Schemat](#20)
 * [Ułożenie komponentów i pól dla elementów](#30)
-* [Generowanie Netlist (listy połączeń)](#41)
+* [Generowanie Netlist (listy połączeń)](#40)
 * [PCB](#5)
 	* [Ułożenie komponentów](#51)
 	* [Wycinanie krawędzi](#52)
-	* [Ułożenie ścieżek](#53)
-	* [Otwory montażowe](#54)
+	* [Warstwa masowa](#53)
+	* [Ułożenie ścieżek](#54)
+	* [Otwory montażowe](#55)
 * [Produkcja](#6)
 	* [Pliki Gerber](#61)
 	* [Producent](#62)
@@ -103,7 +104,9 @@ Finally, let's label all the unused pins as not connected. Use the no connect to
 
 ![final schematic](https://puu.sh/tlNbx/34287f96f2.png)
 
-## Associating Components and Footprints
+## 3.0
+
+Ułożenie Komponentów i Elementów
 
 We have to tell KiCad what each of these components means. Click on the icon for CvPcb at the top:
 
@@ -119,7 +122,9 @@ We're going to assume that all of our capacitors and resistors are 0805 imperial
 
 Save the assocations and close the window.
 
-## Generating Netlist
+## 4.0
+
+Generowanie Netlist (listy połączeń)
 
 Now we want to generate the netlist, which is essentially a list of connections in our schematic. Click on the netlist button:
 
@@ -127,7 +132,9 @@ Now we want to generate the netlist, which is essentially a list of connections 
 
 In the dialog that opens, simply click "Generate". Use the default netlist name in the save dialog. If everything was laid out and named properly, KiCad should not ask you about annotations. If so, click "Cancel" and double check all of your references then try again.
 
-## PCB
+## 5.0
+
+PCB
 
 Now we get to create our PCB! Save and close out of the schematic editor. Then, go back to your project and open your ".kicad_pcb" file. You should be greeted by a blank PCB editor:
 
@@ -169,7 +176,9 @@ Let's separate our footprints and put them on the correct side of the PCB. The o
 
 ![separated footprints](https://puu.sh/tlLUh/de9d45ca47.png)
 
-### Component Placement
+### 5.1
+
+Ułożenie komponentów
 
 Arrange your switch footprints as shown if you haven't already. Then, edit each of the switch footprints and change the "Move and Place" option to "Lock footprint" so that we don't accidentally move them:
 
@@ -211,7 +220,9 @@ And our last components, the resistors. Place them in a way such that routing tr
 
 Note that at this point, my grid sizes are at 0.0234375" in each dimension to allow for finer positioning.
 
-### Edge Cuts
+### 5.2
+
+Wycinanie krawędzi
 
 Now let's draw out the outline for our board! Go to the "Layer" tab on the right and click next to "Edge.Cuts" to move the blue arrow down to it, effectively selecting it as the layer we're going to draw on:
 
@@ -225,7 +236,8 @@ Here's how I cut mine:
 
 ![cuts](https://puu.sh/tlNIf/343882f7c3.png)
 
-### Ground Plane
+### 5.3 
+Warstwa masowa
 
 We want to put a ground plane in the PCB. Essentially, a ground plane is just one big chunk of copper that's connected to ground on both sides of the PCB. It's useful when we have a lot of components that are connected to ground, like in our PCB. To do this, we want to use the zone tool:
 
@@ -249,7 +261,9 @@ And your PCB should now look something like this:
 
 Now choose the option to hide filled zones. We don't want them while routing.
 
-### Routing
+### 5.4
+
+Ułożenie ścieżek
 
 Now we want to do some routing. To route, we want to use the "add tracks and vias" tool:
 
@@ -306,15 +320,18 @@ Go to View > 3D View and turn on Preference > Realistic Mode. Turn up all the se
 
 ![render](https://puu.sh/tlRpH/05e76f2ba9.png)
 
-### Mounting Holes
+### 5.5
+Otwory montażowe
 
 Now, with a normal PCB, you would want to add some mounting holes. The way you would add those would be by creating custom footprints with NPTH (non-plated through hole) pads and adding them to your PCB. This is out of scope for this guide, but this is something that is very simple to Google!
 
-## Production
+## 6
 
 Now that you've finished designing your PCB, you want to get it made, right? Let's get you started on that.
 
-### Gerber Files
+### 6.1
+
+Pliki Gerber
 
 First thing is to generate our "gerbers", which are essentially files that tell the PCB manufactuer what is on each layer. Click on the "plot" icon:
 
@@ -338,7 +355,9 @@ Put all the files you just generated into a zip file:
 
 Upload your files onto http://www.gerber-viewer.com/ and make sure all the layers look good. If so, you're ready to send your PCB off to the manufacturer!
 
-### Manufacturer
+### 6.2
+
+Produkcja
 
 Now, there are a lot of options here. I've personally used [PCBWay](http://www.pcbway.com/setinvite.aspx?inviteid=25678) (referral link) to great success, but there are plenty of other cheap PCB prototyping services, such as [EasyEDA](https://easyeda.com/), [OSH Park](https://oshpark.com) and [DirtyPCBs](http://dirtypcbs.com/store/pcbs).
 
@@ -346,7 +365,7 @@ All of these services simply involve choosing some options for how your PCBs wil
 
 Once you receive your PCBs, you can simply use some solder paste and a hot air rework station to put everything together! If you're unsure of how to do this, there are plenty of resources online that can teach you the basics of SMD soldering.
 
-### Components
+### 6.3 Elementy
 
 But where do you get the components from? I highly recommend [DigiKey](http://www.digikey.com/) for components. Here's a list of all the components used in this guide:
 
